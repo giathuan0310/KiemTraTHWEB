@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/Css/css.css">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  
+</head>
+<body>
+ 
+  <div class="main">
+    <div >
+        <img class="img container-fluid " src="/img/banner.jpg" alt="">
+        <h1 class="title">Tư Vấn Online</h1>
+    </div>
+
+    
+
+    <ul class="nav">
+      <li class="nav-item"><a href=""  class="nav-link">Trang Chủ</a></li>
+      <li class="nav-item"><a href="" data-bs-toggle="modal" data-bs-target="#myModal" class="nav-link">Đặt Lịch</a></li>
+    </ul>
+    <table style="width:100%" id="sampleTable" border="1">
+        <tr>
+          <th>STT</th>
+          <th>Mã Bệnh Nhân</th>
+          <th>Mật Khẩu</th>
+          <th>Ngày Khám</th>
+          <th>Phụ Thu dịch vụ</th>
+          <th>Chuyên Khoa</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>VN123</td>
+          <td>12345</td>
+          <td>22/3/2023</td>
+          <td>500000</td>
+          <td>Ngoại Nhi</td>
+        </tr>
+         <!-- The Modal -->
+      <div class="modal" id="myModal">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+      
+            <!-- Modal Header -->
+            <div class="modal-header">
+
+              <h4 class="modal-title">Đặt Lịch Khám online</h4>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+      
+            <!-- Modal body -->
+            <div class="modal-body">
+
+             <form action=""   method="" name="register" onsubmit="return FormValidate();"> 
+                  <h4>Mã Bệnh Nhân</h4>
+                  <input class="input1" type="text"  placeholder="Ma Benh Nhan" onblur="checkName()" name="ma" id="ma" style="width: 643px;">
+                  <span style="color: red;" id="errorName">(*)BN-YYYYY</span>
+                  
+                  <h4>Mật Khẩu</h4>
+                  <input class="input2" type="password" name="pwd" id="pwd" onblur="pass()" placeholder="Mật Khẩu" style="width: 643px;">
+                  <span style="color: red;" id="errorPass">(*)</span>
+                  <h4>Ngày Khám</h4>
+                  <input class="input3" type="date" name="inputDate" id="inputDate" onblur="date()" placeholder="mm/dd/yy" style="width: 643px;">
+                  <span style="color: red;" id="ErrDate">(*)</span>
+                  <h4>Loại dịch vụ</h4>
+                    
+                    <input type="checkbox" class="input[type=checkbox]" name="" id=""> Khám theo yêu cầu
+                    <input type="checkbox" class="input[type=checkbox]" name="" id=""> Điều trị ngoại trú
+                    <input type="checkbox" class="input[type=checkbox]" name="" id=""> Bác sĩ theo yêu cầu
+
+                    <h4>Chuyên Khoa</h4>
+                  <select name="" class="chuyenkhoa" class="input">
+                    <option value="Ngoại Tổng Quát">Ngoại Tổng Quát</option>
+                    <option value="Ngoại Nhi">Ngoại Nhi</option>
+                    <option value="Ngoại Nội tổng quát">Ngoại Nội tổng quát</option>
+                  </select>
+
+                  
+                  <button type="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal" onclick="insert_Row()" value="Insert row" >
+                    Đặt Lịch
+                  </button>
+
+              </form>
+
+            </div >
+            <div ></div>
+
+          
+      
+            <!-- Modal footer -->
+            <div class="modal-footer ">
+              <button type="button" class="btn btn-primary" data-bs-dismiss="modal"  value="Insert row" >Close</button>
+            </div>
+      
+          </div>
+        </div>
+      </div>
+
+        
+    </table>
+      
+
+    
+
+
+
+  </div>     
+
+
+
+
+<script src="/JS/js.js"></script>
+
+
+</body>
+</html>
